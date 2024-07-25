@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'config/theme/theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme(seletordeCor: 4).theme(),
       title: 'Yes No App',
       home: Scaffold(
         appBar: AppBar(
