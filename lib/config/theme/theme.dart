@@ -18,7 +18,7 @@ class AppTheme {
 
   ThemeData theme() {
     return ThemeData(
-      useMaterial3: false, // na versão atual do flutter, é true por padrao
+      useMaterial3: true, // na versão atual do flutter, é true por padrao
       colorSchemeSeed: _coresDoTema[seletordeCor],
     );
   }
