@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes_or_no/screens/widgets/chat/my_message_bubble.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -16,6 +17,35 @@ class ChatScreen extends StatelessWidget {
         ),
         title: const Text('Meu amor ❤️'),
         centerTitle: false,
+      ),
+      body: const _ChatView(),
+    );
+  }
+}
+
+class _ChatView extends StatelessWidget {
+  const _ChatView();
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            Expanded(
+              child: (ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return const MyMessageBubble();
+                },
+              )),
+            ),
+            Expanded(
+              child: Text('Mundo'),
+            ),
+          ],
+        ),
       ),
     );
   }
